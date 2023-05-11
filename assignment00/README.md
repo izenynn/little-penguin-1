@@ -1,11 +1,13 @@
-# Clone
+# How to
+
+## Clone
 
 ```bash
 git clone --recurse-submodules https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 cd linux
 ```
 
-# Compile
+## Compile
 
 ```bash
 # clean the tree
@@ -29,13 +31,23 @@ install -d /usr/share/doc/linux-6.4.0
 cp -r Documentation/* /usr/share/doc/linux-6.4.0
 ```
 
-# Config
+## Grub
+
+```bash
+# edit the `/boot/grub/grub.cfg` file and add a new entry for the new kernel
+nvim /boot/grub/grub.cfg
+# reboot into your brand new kernel! :D
+```
+
+# Files to turn in
+
+## Config
 
 ```bash
 cp -v /boot/config-6.4.0 ./.config
 ```
 
-# Boot log
+## Boot log
 
 ```bash
 cp -v /var/log/boot.log .

@@ -4,7 +4,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("izenynn");
-MODULE_DESCRIPTION("A simple Hello World kernel module");
+MODULE_DESCRIPTION("A simple Hello world kernel module");
 MODULE_VERSION("0.1");
 
 static int __init hello_init(void)

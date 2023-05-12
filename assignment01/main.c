@@ -1,9 +1,9 @@
 #include <linux/init.h>
 #include <linux/module.h>
-#include <linux/kernel.h>
+#include <linux/printk.h>
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Your Name");
+MODULE_AUTHOR("izenynn");
 MODULE_DESCRIPTION("A simple Hello World kernel module");
 MODULE_VERSION("0.1");
 

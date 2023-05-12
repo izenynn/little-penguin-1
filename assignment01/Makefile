@@ -1,20 +1,28 @@
 obj-m += main.o
+#obj-m += other.o
 
 PWD := $(CURDIR)
 
 SILENT := all
 PHONY := all
-all: module
+all: modules
 
-PHONY += module
-module:
+SILENT += dev
+PHONY += dev
+dev: modules compile_commands.json
+
+PHONY += modules
+modules:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+
+PHONY += compile_commands.json
+compile_commands.json:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) compile_commands.json
+	sed -i -e 's/-fconserve-stack //' -e 's/-fno-allow-store-data-races //' -e 's/-mindirect-branch-register //' -e 's/-mindirect-branch=thunk-extern //' -e 's/-mpreferred-stack-boundary=3 //' compile_commands.json
 
 PHONY += clean
 clean:
-	mv ./compile_commands.json ./compile_commands.json.bak
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
-	mv ./compile_commands.json.bak ./compile_commands.json
 
 PHONY += check
 check:

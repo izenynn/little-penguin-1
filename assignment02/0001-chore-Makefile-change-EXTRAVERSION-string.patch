@@ -1,0 +1,28 @@
+From 73dbd85eb756cb0831a12b53e0a710ed3a99b294 Mon Sep 17 00:00:00 2001
+From: izenynn <me@izenynn.com>
+Date: Fri, 12 May 2023 12:36:04 +0200
+Subject: [PATCH 1/1] chore(Makefile): change EXTRAVERSION string
+
+Change the EXTRAVERSION Makefile string from `-rc1` to `-thor_kernel`
+
+Signed-off-by: izenynn <me@izenynn.com>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 9d765ebcccf1..b7d7b9099f81 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 6
+ PATCHLEVEL = 4
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc1
++EXTRAVERSION = -thor_kernel
+ NAME = Hurr durr I'ma ninja sloth
+ 
+ # *DOCUMENTATION*
+-- 
+2.39.2
+

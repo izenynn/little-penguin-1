@@ -15,6 +15,10 @@ PHONY += modules
 modules:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
+PHONY += modules_install
+modules_install:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules_install
+
 PHONY += compile_commands.json
 compile_commands.json:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) compile_commands.json

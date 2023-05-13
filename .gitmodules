@@ -1,3 +1,0 @@
-[submodule "assignment00/linux"]
-	path = assignment00/linux
-	url = https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/

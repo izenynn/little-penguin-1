@@ -4,8 +4,8 @@
 
 A series of Linux kernel programming assignments.
 
-- Status: on going
-- Result: n/a
+- Status: finished
+- Result: 100%
 - Observations: null
 
 ## Linux
@@ -13,7 +13,7 @@ A series of Linux kernel programming assignments.
 In this project we need to clone and use the last linus linux git tree,
 when doing this project the last (and used) commit was:
 ```
-105131df9c3b27673392a6b7ff356360188dc869`
+105131df9c3b27673392a6b7ff356360188dc869
 ```
 
 ##

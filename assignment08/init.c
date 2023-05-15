@@ -86,7 +86,7 @@ ssize_t myfd_write(struct file *fp, const char __user *user, size_t size,
 		myfd_data[0] = '\0';
 		return ret;
 	}
-	myfd_data[*offs + ret] = '\0';
+	myfd_data[*offs] = '\0';
 	mutex_unlock(&myfd_mutex);
 
 	return ret;

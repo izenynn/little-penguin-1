@@ -90,6 +90,7 @@ static struct miscdevice fortytwo_misc_device = {
 	.minor = MISC_DYNAMIC_MINOR,
 	.name = "fortytwo",
 	.fops = &fortytwo_fops,
+	.mode = 0666,
 };
 
 static int __init fortytwo_init(void)

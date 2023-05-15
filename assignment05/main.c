@@ -54,16 +54,18 @@ static loff_t fortytwo_llseek(struct file *file, loff_t offset, int whence)
 	size_t len = strlen(STUDENT_LOGIN);
 
 	switch (whence) {
-	case 0: /* SEEK_SET */
+	case SEEK_SET:
+		if (offset < 0)
+			return -EINVAL;
 		newpos = offset;
 		break;
-	case 1: /* SEEK_CUR */
+	case SEEK_CUR:
 		newpos = file->f_pos + offset;
 		break;
-	case 2: /* SEEK_END */
+	case SEEK_END:
 		newpos = len + offset;
 		break;
-	default: /* can't happen */
+	default: /* Should never happen */
 		return -EINVAL;
 	}
 
